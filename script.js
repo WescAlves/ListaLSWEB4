@@ -24,10 +24,10 @@ function printar(lista){
     let tdValor = document.createElement("td");
     let tdComprado = document.createElement("td");
     let tdRemove = document.createElement("td");
-    tdNome.textContent = 'Nome';
-    tdValor.textContent = 'Valor';
-    tdComprado.textContent = 'Comprado?';
-    tdRemove.textContent = 'Ações';
+    tdNome.textContent = 'NOME';
+    tdValor.textContent = 'VALOR';
+    tdComprado.textContent = 'CHECKLIST';
+    tdRemove.textContent = 'AÇÕES';
     tabela.append(topo);
     topo.appendChild(tdNome);
     topo.appendChild(tdValor);
@@ -47,10 +47,11 @@ function printar(lista){
         input.checked = item.comprado;
         input.addEventListener("click", function(){
             marcarItem(item.nome);
-            console.log(item.nome);
+            
         })
         let botaoRem = document.createElement("button");
         botaoRem.textContent = 'Remover';
+        botaoRem.id = "btn-rem"
         botaoRem.addEventListener("click", function (){
             console.log('entrou')
             removerItem(item);
