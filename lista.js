@@ -12,7 +12,6 @@ const adicionarItem = function(item){
 }
 
 const removerItem = function(item){
-    console.log(item);
     localStorage.removeItem(item.nome);
     
 }
@@ -21,14 +20,14 @@ const pegaItem = function(key){
 }
 
 const marcarItem = function(key){
+   
     let itemMarcar = JSON.parse(localStorage.getItem(key));
-    
     if(itemMarcar.comprado === true){
-        itemMarcar.comprado = 'false';
+        itemMarcar.comprado = false;
         adicionarItem(itemMarcar);
     }
     else{
-        itemMarcar.comprado = "true"
+        itemMarcar.comprado = true;
         adicionarItem(itemMarcar);
     }
 } 

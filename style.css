@@ -10,13 +10,13 @@
 
 body {
     margin-top: 35px;
-    margin-left: 530px;
+    margin-left: 480px;
     font-size: 40px;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
 }
 
 input[type="checkbox"] {
-    transform: scale(3);
+    transform: scale(2.5);
 }
 
 .input-info{
@@ -26,7 +26,6 @@ input[type="checkbox"] {
     border-radius: 10px;
 }
 #add-btn{
-
     height: 35px;
     font-size: 20px;
     border-radius: 10px;
@@ -35,12 +34,13 @@ input[type="checkbox"] {
 table{
     border-style: groove;
     border: 1px, solid, black;
+    border-radius: 5px;
     width: 200px;
     margin-top: 50px;
 }
 
 td{
-    border-style: groove;
+    border-style:groove;
     border: 1px, solid, black;
     text-align: center;
 }
