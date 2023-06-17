@@ -17,7 +17,6 @@ class item {
 }
 
 function printar(lista){
-    console.log("Entrou aqui")
     tabela.innerHTML = '';
     let topo = document.createElement("tr");
     let tdNome = document.createElement("td");
@@ -47,17 +46,17 @@ function printar(lista){
         input.checked = item.comprado;
         input.addEventListener("click", function(){
             marcarItem(item.nome);
-            
         })
         let botaoRem = document.createElement("button");
         botaoRem.textContent = 'Remover';
         botaoRem.id = "btn-rem"
         botaoRem.addEventListener("click", function (){
-            console.log('entrou')
             removerItem(item);
             lista = pegaLista();
             printar(lista);
         })
+        
+        
         tdItemComprado.appendChild(input);
         tdItemAcoes.appendChild(botaoRem);
         trProduto.appendChild(tdItemNome);
@@ -65,6 +64,7 @@ function printar(lista){
         trProduto.appendChild(tdItemComprado);
         trProduto.appendChild(tdItemAcoes);
         tabela.appendChild(trProduto);
+        
 
 
     });
@@ -73,11 +73,9 @@ function printar(lista){
 
 
 addBtn.addEventListener("click", () => {
-    //console.log("Entrou aqui")
     const nome = inputItem.value;
     const preco = inputPreco.value;
-    let novoItem = new item(nome, preco)
-    console.log(novoItem);    
+    let novoItem = new item(nome, preco)        
     adicionarItem(novoItem);
     let lista = pegaLista();
     printar(lista);    
